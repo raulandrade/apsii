@@ -3,9 +3,7 @@ public class Carro extends Veiculo{
 
 	@Override
 	public String acelerar() {
-		return "Carro acelerando rápido!";
+		return "O carro está acelerando rápido";
 	}
-
-	
 
 }
