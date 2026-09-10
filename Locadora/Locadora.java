@@ -1,18 +1,12 @@
-
 public class Locadora {
-	
-	public static void main(String[] args) {
-		
-		Cliente cliente = new Cliente("Raul");
-		
-		Fita fita1 = new Fita("Matrix", Fita.NORMAL);
-		Fita fita2 = new Fita("Toy Story", Fita.INFANTIL);
-		Fita fita3 = new Fita("Oppenheimer", Fita.LANCAMENTO);
-		
-		cliente.adicionaAluguel(new Aluguel(fita1, 3));
-		cliente.adicionaAluguel(new Aluguel(fita2, 4));
-		cliente.adicionaAluguel(new Aluguel(fita3, 2));
+    public static void main(String[] args) {
+        Cliente cliente = new Cliente("Raul");
 
-	    System.out.println(cliente.extrato());
-	}
+        cliente.adicionaAluguel(new Aluguel(new Fita("Matrix", Fita.NORMAL), 3));
+        cliente.adicionaAluguel(new Aluguel(new Fita("Toy Story", Fita.INFANTIL), 4));
+        cliente.adicionaAluguel(new Aluguel(new Fita("Oppenheimer", Fita.LANCAMENTO), 2));
+
+        System.out.println(cliente.extrato());
+    }
 }
+
